@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  year: MyString
+  genre: MyString
+  actors: MyString
+  metascore: 9.99
+  imdbscore: 9.99
+  user_rating: 9.99
+
+two:
+  title: MyString
+  year: MyString
+  genre: MyString
+  actors: MyString
+  metascore: 9.99
+  imdbscore: 9.99
+  user_rating: 9.99
