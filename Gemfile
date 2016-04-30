@@ -6,6 +6,12 @@ gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 gem 'pg'
+# utilizing TheMovieDb for accessing movie content
+gem 'themoviedb'
+# gem httparty for API parsing ??
+gem 'httparty'
+# gem for displaying database info in a table format
+gem 'hirb'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
