@@ -18,6 +18,6 @@ p strong {
   color: blue;
 }
 
-section.user_movies {
-  
+section.user_movies li {
+  text-decoration: none;
 }
