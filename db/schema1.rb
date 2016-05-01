@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160430213013) do
+ActiveRecord::Schema.define(version: 20160430214139) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20160430213013) do
     t.string   "title"
     t.string   "year"
     t.string   "genre"
-    t.string   "actors"
     t.decimal  "metascore"
     t.decimal  "imdbscore"
     t.decimal  "user_rating"
@@ -34,7 +33,6 @@ ActiveRecord::Schema.define(version: 20160430213013) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "movie_id"
-    t.string   "last_name"
     t.string   "first_name"
   end
 

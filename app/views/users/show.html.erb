@@ -1,8 +1,25 @@
 <p id="notice"><%= notice %></p>
 
+<h2>Welcome <%= @user.first_name %>!</h2>
+
+  <section id="user_movies">
+    <ul>
+      <li><%= link_to 'Suggest a Movie' %></li>
+      <li><%= link_to 'View my movies', user_path(@user.movies) %></li>
+      <li><%= link_to 'New Movie', new_movie_path %></li>
+  </ul>
+</section>
+
+
+
+<!-- <p>
+  <strong>First Name:</strong>
+  <%= @user.first_name %>
+</p>
+
 <p>
-  <strong>Name:</strong>
-  <%= @user.name %>
+  <strong>Last Name:</strong>
+  <%= @user.last_name %>
 </p>
 
 <p>
@@ -10,5 +27,10 @@
   <%= @user.email %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<p>
+  <strong>Movies:</strong>
+  <%= @user.movies %>
+</p> -->
+
+<%= link_to 'Edit', edit_user_path(@user) %> 
+<%#= link_to 'Back', users_path %>
