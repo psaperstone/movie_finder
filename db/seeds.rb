@@ -5,4 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+<<<<<<< HEAD
 # user1 = User.create([{ name: 'Tim' email: 'tim@tim.com'}, { name: 'Paul' email: 'paul@email.com' }])
+=======
+
+# rake db:c to utilize
+>>>>>>> 6bc5a377a9870b08abd603821f583dceb479498a
