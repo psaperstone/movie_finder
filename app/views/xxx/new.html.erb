@@ -1,3 +1,4 @@
+<body>
 <h1>Give me an actor</h1>
 
 <%= form_tag("/xxx", method: :post) do %>
@@ -5,3 +6,8 @@
   <%= text_field_tag(:fullname) %>
   <%= submit_tag("Submit") %>
 <% end %>
+
+<div>
+  <%= link_to 'Home', current_user %>
+</div>
+</body>
