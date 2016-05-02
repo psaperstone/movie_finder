@@ -13,8 +13,8 @@ class XxxController < ApplicationController
   end
 
   def show
-    @myvar = 'will ferrell'            #####  MANUAL INPUT - WANT THIS FROM THE FORM !!!!
-    # @myvar = params[:fullname]       # GOING TO NEED THIS
+    # @myvar = 'will ferrell'            #####  MANUAL INPUT - WANT THIS FROM THE FORM !!!!
+    @myvar = params[:fullname]       # GOING TO NEED THIS
     find_cast_members
   end
 
@@ -31,8 +31,12 @@ class XxxController < ApplicationController
        @search = Tmdb::Search.new
        @search.resource('movie')                    # determines type of resource
        @search.query(film['title'])                 # the query to search against
+       puts "+-+" * 30
+       x = @search.fetch
+       puts "#{film['title']} results: #{x}"
+       puts "+-+" * 30
        rating = @search.fetch[0]['vote_average']    # retrieve the movie rating
-       if film['title'] == nil #&& !nil?
+       if film['title'].nil?
          next
        else
          films_in << [film['title'],rating]     # insert each of the actors films & rating into the array
@@ -45,6 +49,16 @@ class XxxController < ApplicationController
      p films_in
     #  film_appearances
   end
+
+# films_in[0][0]
+# Movie.where(actors: 'will ferrell')
+
+# Movie.first.actors # returns a string
+# Movie.first.actors.split(', ')          # converts each name to array values, now look for actor
+# Movie.first.actors.split(', ').include?("Jodie Foster")
+# Movie.where(title: 'Old School').pluck(:actors)
+# Movie.where(title: 'Old School').pluck(:actors)[0].split(', ')     # returns names in array
+# Movie.where(title: 'Old School').pluck(:actors)[0].split(', ').include?("Will Ferrell")
 
 
   # def film_appearances
