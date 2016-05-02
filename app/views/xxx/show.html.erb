@@ -1,11 +1,10 @@
-<h1>You did it</h1>
+<h1>The actor appeared in these films you have not seen:</h1>
 
-<%= form_tag("/xxx/show", method: "get") do %>
-  <%= label_tag(:fullname, "Enter an actor:") %>
-  <%= text_field_tag(:fullname) %>
-  <%= submit_tag("Submit") %>
-<% end %>
+
 
 <p>The Actor variable =  <%= @myvar %></p>
 
 <%= link_to 'Home', current_user %>
+
+
+<p>List:  <%= @search_result %></p>

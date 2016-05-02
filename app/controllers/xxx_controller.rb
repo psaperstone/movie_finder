@@ -3,6 +3,7 @@ class XxxController < ApplicationController
 
   def initialize
     @actor = actor
+    # @films_in = films_in
   end
 
   def index
@@ -13,8 +14,13 @@ class XxxController < ApplicationController
   end
 
   # def show
+
   #   # @myvar = 'will ferrell'            #####  MANUAL INPUT - WANT THIS FROM THE FORM !!!!
   #   @myvar = params[:fullname]       # GOING TO NEED THIS
+=======
+  #   # @myvar = 'will ferrell'       #####  MANUAL INPUT - temporary work around !!!!
+  #   @myvar = params[:fullname]      # GOING TO NEED THIS
+>>>>>>> 35362b6e55289675e9df2e796f5479af5fc00835
   #   find_cast_members
   # end
 
@@ -45,6 +51,7 @@ class XxxController < ApplicationController
        end
      end
 
+
      def show
        # @myvar = 'will ferrell'            #####  MANUAL INPUT - WANT THIS FROM THE FORM !!!!
        @myvar = params[:fullname]       # GOING TO NEED THIS
@@ -53,7 +60,18 @@ class XxxController < ApplicationController
 
     #  p "FINISH - HERE IS THE FINAL ARRAY"
     #  p films_in
+=======
+     p "FINISH - HERE IS THE FINAL ARRAY"
+     p films_in
+>>>>>>> 35362b6e55289675e9df2e796f5479af5fc00835
     #  film_appearances
+  end
+
+  def create
+    # @myvar = 'will ferrell'       #####  MANUAL INPUT - temporary work around !!!!
+    @myvar = params[:fullname]      # GOING TO NEED THIS
+    @search_result = find_cast_members
+    render 'xxx/show'
   end
 
 # films_in[0][0]
