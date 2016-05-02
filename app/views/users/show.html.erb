@@ -1,3 +1,5 @@
+
+<section class="page-container">
 <p id="notice"><%= notice %></p>
 
 <h2>Welcome <%= @user.first_name %>!</h2>
@@ -10,27 +12,6 @@
   </ul>
 </section>
 
-
-
-<!-- <p>
-  <strong>First Name:</strong>
-  <%= @user.first_name %>
-</p>
-
-<p>
-  <strong>Last Name:</strong>
-  <%= @user.last_name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Movies:</strong>
-  <%= @user.movies %>
-</p> -->
-
-<%= link_to 'Edit', edit_user_path(@user) %>
+<%= link_to 'Update Profile', edit_user_path(@user) %>
 <%#= link_to 'Back', users_path %>
+</section>

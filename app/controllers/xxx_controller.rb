@@ -12,11 +12,11 @@ class XxxController < ApplicationController
     @recommendation = Recommendation.new
   end
 
-  def show
-    # @myvar = 'will ferrell'            #####  MANUAL INPUT - WANT THIS FROM THE FORM !!!!
-    @myvar = params[:fullname]       # GOING TO NEED THIS
-    find_cast_members
-  end
+  # def show
+  #   # @myvar = 'will ferrell'            #####  MANUAL INPUT - WANT THIS FROM THE FORM !!!!
+  #   @myvar = params[:fullname]       # GOING TO NEED THIS
+  #   find_cast_members
+  # end
 
   def find_cast_members
      @search = Tmdb::Search.new
@@ -45,8 +45,14 @@ class XxxController < ApplicationController
        end
      end
 
-     p "FINISH - HERE IS THE FINAL ARRAY"
-     p films_in
+     def show
+       # @myvar = 'will ferrell'            #####  MANUAL INPUT - WANT THIS FROM THE FORM !!!!
+       @myvar = params[:fullname]       # GOING TO NEED THIS
+       find_cast_members
+     end
+
+    #  p "FINISH - HERE IS THE FINAL ARRAY"
+    #  p films_in
     #  film_appearances
   end
 
