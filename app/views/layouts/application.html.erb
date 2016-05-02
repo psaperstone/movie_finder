@@ -7,6 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<section class="page-container">
+  <div id="main-container" class="container">
+    <div class="row">
+      <div class="col-xs-3">
+        <h3>Movie Finder</h3>
+        <!-- user status options -->
   <div class="nav pull-right">
           <% if current_user %>
   <ul>
@@ -19,10 +25,12 @@
     <li><%= link_to "Signup", 'signup' %></a></li>
   </ul>
 <% end %>
+</div>
 
         </div>
-
-<%= yield %>
-
+        <div class="col-xs-9">
+          <%= yield %>
+        </div>
+</section>
 </body>
 </html>
