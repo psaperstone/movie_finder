@@ -3,6 +3,7 @@ class XxxController < ApplicationController
 
   def initialize
     @actor = actor
+    # @films_in = films_in
   end
 
   def index
@@ -12,11 +13,11 @@ class XxxController < ApplicationController
     @recommendation = Recommendation.new
   end
 
-  def show
-    # @myvar = 'will ferrell'            #####  MANUAL INPUT - WANT THIS FROM THE FORM !!!!
-    @myvar = params[:fullname]       # GOING TO NEED THIS
-    find_cast_members
-  end
+  # def show
+  #   # @myvar = 'will ferrell'       #####  MANUAL INPUT - temporary work around !!!!
+  #   @myvar = params[:fullname]      # GOING TO NEED THIS
+  #   find_cast_members
+  # end
 
   def find_cast_members
      @search = Tmdb::Search.new
@@ -44,10 +45,16 @@ class XxxController < ApplicationController
          p films_in
        end
      end
-
      p "FINISH - HERE IS THE FINAL ARRAY"
      p films_in
     #  film_appearances
+  end
+
+  def create
+    # @myvar = 'will ferrell'       #####  MANUAL INPUT - temporary work around !!!!
+    @myvar = params[:fullname]      # GOING TO NEED THIS
+    @search_result = find_cast_members
+    render 'xxx/show'
   end
 
 # films_in[0][0]
