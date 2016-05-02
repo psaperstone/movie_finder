@@ -1,4 +1,10 @@
 class XxxController < ApplicationController
+  attr_accessor :actor
+
+  def initialize
+    @actor = actor
+  end
+
   def index
   end
 
@@ -7,46 +13,67 @@ class XxxController < ApplicationController
   end
 
   def show
-    @myvar = params[:fullname]
+    @myvar = 'will ferrell'            #####  MANUAL INPUT - WANT THIS FROM THE FORM !!!!
+    # @myvar = params[:fullname]       # GOING TO NEED THIS
+    find_cast_members
   end
 
   def find_cast_members
-     p @search = Tmdb::Search.new
-    #  p @search.resource('person')                 # determines type of resource
-    #  p @search.query(@myvar)            # the query to search against
-    #  actor = @search.fetch[0]['id']             # retrieve the actor/actress ID
-    #  p actor
-    #  all_credits = Tmdb::Person.credits(actor)            # returns all credits info
-    #  @films_in = Tmdb::Person.credits(2231)['cast'][0]['title']  # iterate and capture this
-  end
+     @search = Tmdb::Search.new
+     @search.resource('person')                         # determines type of resource
+     @search.query(@myvar)                              # the query to search against
+     @actor = @search.fetch[0]['id']                    # retrieve the actor/actress ID
+     all_credits = Tmdb::Person.credits(actor)['cast']  # returns all credits info
 
-  def film_appearances
-    p @search = Tmdb::Search.new
-    new_var = @search.resource('person')                 # determines type of resource
-    newest_var = @search.query('will ferrell')     # the query to search against
-    actor = @search.fetch[0]['id']    # retrieve the actor/actress ID
-    all_credits = Tmdb::Person.credits(actor)            # returns all credits info
+     films_in = []
 
-  # films_in = Tmdb::Person.credits(2231)['cast'][0]['title']  # iterate and capture this
-  # films_in = all_credits['cast'][0]['title']  # iterate and capture this
-    newer_var = all_credits['cast']
-    p newer_var
+     all_credits.each do |film|
+       @search = Tmdb::Search.new
+       @search.resource('movie')                    # determines type of resource
+       @search.query(film['title'])                 # the query to search against
+       rating = @search.fetch[0]['vote_average']    # retrieve the movie rating
+       if film['title'] == nil #&& !nil?
+         next
+       else
+         films_in << [film['title'],rating]     # insert each of the actors films & rating into the array
+         p "THE MULTI-DIMEMSIONAL ARRAY IS BUILDING............."
+         p films_in
+       end
+     end
 
-  ### GET EACH of those ACTOR/ACRESS FILMS RATING
-    p @search = Tmdb::Search.new
-    new_rating_var = @search.resource('movie')                 # determines type of resource
-    newest_rating_var = @search.query('Step Brothers')     # the query to search against
-    rating = @search.fetch[0]['vote_average']    # retrieve the movie rating
-
-    @film_appearances = []
-
-    newer_var.each do |film|
-    @film_appearances << film['title']
-    end
-
-    p @film_appearances.compact
-    # @film_appearances = @film_appearances#.compact.join(', ')
+     p "FINISH - HERE IS THE FINAL ARRAY"
+     p films_in
+    #  film_appearances
   end
 
 
+  # def film_appearances
+  # #   p "$"*44
+  # #   p @myvar
+  # #   @search = Tmdb::Search.new
+  # #   new_var = @search.resource('person')    # determines type of resource
+  # #   newest_var = @search.query(@myvar)      # the query to search against
+  # #   actor = @search.fetch[0]['id']          # retrieve the actor/actress ID
+  # #   all_credits = Tmdb::Person.credits(actor) # returns all credits info
+  # #
+  # # # films_in = Tmdb::Person.credits(2231)['cast'][0]['title']  # iterate and capture this
+  # # # films_in = all_credits['cast'][0]['title']  # iterate and capture this
+  # #   newer_var = all_credits['cast']
+  # #   p newer_var
+  #
+  # ### GET EACH of those ACTOR/ACRESS FILMS RATING
+  #   @search = Tmdb::Search.new
+  #   new_rating_var = @search.resource('movie')                 # determines type of resource
+  #   newest_rating_var = @search.query('Step Brothers')     # the query to search against
+  #   rating = @search.fetch[0]['vote_average']    # retrieve the movie rating
+  #
+  #   @film_appearances = []
+  #
+  #   newer_var.each do |film|
+  #   @film_appearances << film['title']
+  #   end
+  #
+  #   p @film_appearances.compact
+  #   # @film_appearances = @film_appearances#.compact.join(', ')
+  # end
 end
