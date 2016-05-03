@@ -4,13 +4,31 @@
 
 
 body {
-  background-color: #fff;
-  text-color: white;
+  height: 500px;
+  color: white;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  background-image: image-url('background-main.jpeg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  image-url('background-main.jpeg');
   background-repeat: no-repeat;
   background-size: 100%;
+  position: relative;
 }
+
+section.user_movies li {
+  color: white;
+}
+
+section.page-container h2 {
+  color: white;
+}
+
+section.page-container {
+  color: white;
+}
+
+// div.login {
+//   position:absolute;
+// }

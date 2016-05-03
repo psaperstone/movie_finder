@@ -1,5 +1,6 @@
 <h1>All films in which <%= @myvar.split.each{ | word | word.capitalize! }.join(' ') %> has appeared in:</h1>
 
+
 <table>
   <th>
     <tr>
@@ -16,3 +17,9 @@
     <% end %>
   </tbody>
 </table>
+
+
+
+<p>The Actor variable =  <%= @myvar %></p>
+
+<%= link_to 'Home', current_user %>

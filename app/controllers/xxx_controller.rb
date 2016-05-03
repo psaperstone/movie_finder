@@ -14,8 +14,13 @@ class XxxController < ApplicationController
   end
 
   # def show
+
+  #   # @myvar = 'will ferrell'            #####  MANUAL INPUT - WANT THIS FROM THE FORM !!!!
+  #   @myvar = params[:fullname]       # GOING TO NEED THIS
+
   #   # @myvar = 'will ferrell'       #####  MANUAL INPUT - temporary work around !!!!
   #   @myvar = params[:fullname]      # GOING TO NEED THIS
+
   #   find_cast_members
   # end
 
@@ -47,7 +52,21 @@ class XxxController < ApplicationController
        end
      end
 
+
+
+     def show
+       # @myvar = 'will ferrell'            #####  MANUAL INPUT - WANT THIS FROM THE FORM !!!!
+       @myvar = params[:fullname]       # GOING TO NEED THIS
+       find_cast_members
+     end
+
     #  p "FINISH - HERE IS THE FINAL ARRAY"
+    #  p films_in
+
+    #  p "FINISH - HERE IS THE FINAL ARRAY"
+    #  p films_in
+
+
     #  film_appearances
 
     p "<>"*44
