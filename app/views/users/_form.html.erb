@@ -11,6 +11,14 @@
        </ul>
      </div>
      <% end %>
+     <%#= form_for(@user) do |f| %>
+       <%#= f.text_field :first_name, :placeholder => "First name" %>
+       <%#= f.text_field :last_name, :placeholder => "Last name" %>
+       <%#= f.email_field :email, :placeholder => "Email" %>
+       <%#= f.password_field :password, :placeholder => "Password" %>
+       <%#= f.submit "Create an account", class: "btn-submit" %>
+     <%# end %>
+
      <div class="field">
        <%= f.label :first_name %><br>
        <%= f.text_field :first_name %>
@@ -22,6 +30,10 @@
      <div class="field">
        <%= f.label :email %><br>
        <%= f.text_field :email %>
+     </div>
+     <div class="field">
+       <%= f.label :password %><br>
+       <%= f.text_field :password %>
      </div>
      <div class="actions">
        <%= f.submit %>

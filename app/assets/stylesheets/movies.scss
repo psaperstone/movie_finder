@@ -10,3 +10,9 @@ table {
   display: block;
   // color: white;
 }
+
+div.my-movies {
+  background-image: image-url('background-main.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

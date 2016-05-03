@@ -10,7 +10,7 @@ div.row {
   // color: white;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
-  line-height: 18px;
+  // line-height: 18px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
   image-url('background-main.jpeg');
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@ div.row {
 }
 
 section.user_movies li {
-  color: white;
+  // color: white;
   // margin-top: 5px;
 }
 
@@ -46,7 +46,7 @@ div.col-xs-9 {
   // margin-left: 0px;
   // margin-top: 75px;
   // align-self: center;
-  color: white;
+  // color: white;
 }
 
 div.status {
@@ -58,5 +58,24 @@ div.navpull-right ul li {
 }
 
 section.user_movies a {
+  color: white;
+}
+
+h1.signup {
+  // color: white;
+}
+
+div.loginlink {
+  margin-top: 100px;
+}
+
+img.ubi {
+  background-size: contain;;
+}
+#user-show {
+  background-image: image-url('background-main.jpeg');
+}
+
+h2.welcome {
   color: white;
 }

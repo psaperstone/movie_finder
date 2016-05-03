@@ -1,8 +1,9 @@
 <div id='user-show'>
 <section class="page-container">
+  <%= image_tag('background-main.jpeg', alt: "User Background", class: "ubi") %>
 <p id="notice"><%= notice %></p>
 
-<h2>Welcome <%= @user.first_name %>!</h2>
+<h2 class="welcome">Welcome <%= @user.first_name %>!</h2>
 
   <section class="user_movies">
     <ul>

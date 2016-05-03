@@ -1,26 +1,27 @@
-<!-- <h1>New User</h1>
+<h1>New User</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', users_path %> -->
+<%= link_to 'Back', users_path %>
 
-<div class="login" id='login-bkg'>
+<!-- <div class="login" id='login-bkg'>
   <div class="container">
     <div class="horizontal-form">
+     sign up form on welcome page -->
+    <!-- <h1 class="signup">Sign up</h1> -->
 
-    <h1>Sign up</h1>
+    <%#= form_for(@user) do |f| %>
+      <%#= f.text_field :first_name, :placeholder => "First name" %>
+      <%#= f.text_field :last_name, :placeholder => "Last name" %>
+      <%#= f.email_field :email, :placeholder => "Email" %>
+      <%#= f.password_field :password, :placeholder => "Password" %>
+      <%#= f.submit "Create an account", class: "btn-submit" %>
+    <%# end %>
 
-    <%= form_for(@user) do |f| %>
-      <%= f.text_field :first_name, :placeholder => "First name" %>
-      <%= f.text_field :last_name, :placeholder => "Last name" %>
-      <%= f.email_field :email, :placeholder => "Email" %>
-      <%= f.password_field :password, :placeholder => "Password" %>
-      <%= f.submit "Create an account", class: "btn-submit" %>
-    <% end %>
-
-    </div>
-  </div>
-  <div>
+    <!-- </div> -->
+  <!-- </div> -->
+<!-- </div> -->
+  <div class="loginlink">
     <ul>
       <li><%= link_to "Login", 'login' %></a></li>
     </ul>
