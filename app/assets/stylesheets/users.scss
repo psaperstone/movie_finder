@@ -11,11 +11,11 @@ div.row {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   // line-height: 18px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-  image-url('background-main.jpeg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  position: fixed;
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  // image-url('background-main.jpeg');
+  // background-repeat: no-repeat;
+  // background-size: 100%;
+  // position: fixed;
 }
 
 section.user_movies li {
@@ -27,10 +27,10 @@ section.page-container h2 {
   // color: white;
 }
 
-// section.page-container {
-//   // align-self: center;
-//   color: white;
-// }
+section.page-container {
+  margin-top: 50px;
+  // color: white;
+}
 
 #login-bkg {
   margin-top: 0px;
@@ -38,8 +38,8 @@ section.page-container h2 {
   position: fixed;
   height: 100%;
   width: 100%;
-  background-image: image-url('homepage-main.jpeg');
-  background-size: cover;
+  // background-image: image-url('homepage-main.jpeg');
+  // background-size: cover;
 }
 
 div.col-xs-9 {
@@ -73,9 +73,18 @@ img.ubi {
   background-size: contain;;
 }
 #user-show {
-  background-image: image-url('background-main.jpeg');
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), image-url('background-main.jpeg');
+  margin-top: 25px;
 }
 
 h2.welcome {
+  color: white;
+}
+
+div label {
+  color: white;
+}
+
+h1.new-user {
   color: white;
 }

@@ -6,13 +6,29 @@ h1 {
   // color: white;
 }
 
-table {
+table.my-movies {
   display: block;
-  // color: white;
+  color: white;
 }
 
 div.my-movies {
-  background-image: image-url('background-main.jpeg');
+  // background-image: image-url('background-main.jpeg');
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  color: white;
+}
+
+div.show-movie {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  image-url('blue-reel.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+div.show-movie p {
+  color: white;
+}
+
+div.show-movie a {
+  color: white;
 }

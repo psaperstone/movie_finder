@@ -1,10 +1,10 @@
 class XxxController < ApplicationController
-  attr_accessor :actor
+  # attr_accessor :actor
 
-  def initialize
-    @actor = actor
-    # @films_in = films_in
-  end
+  # def initialize
+  #   @actor = actor
+  #   # @films_in = films_in
+  # end
 
   def index
   end
@@ -29,7 +29,7 @@ class XxxController < ApplicationController
      @search.resource('person')                         # determines type of resource
      @search.query(@myvar)                              # the query to search against
      @actor = @search.fetch[0]['id']                    # retrieve the actor/actress ID
-     all_credits = Tmdb::Person.credits(actor)['cast']  # returns all credits info
+     all_credits = Tmdb::Person.credits(@actor)['cast']  # returns all credits info
 
      films_in = []
      actor_name = @myvar.split.each{ | word | word.capitalize! }.join(' ')
@@ -51,14 +51,14 @@ class XxxController < ApplicationController
         #  p films_in
        end
      end
+     films_in.uniq
+   end
 
-
-
-     def show
-       # @myvar = 'will ferrell'            #####  MANUAL INPUT - WANT THIS FROM THE FORM !!!!
-       @myvar = params[:fullname]       # GOING TO NEED THIS
-       find_cast_members
-     end
+   def show
+     # @myvar = 'will ferrell'            #####  MANUAL INPUT - WANT THIS FROM THE FORM !!!!
+     @myvar = params[:fullname]       # GOING TO NEED THIS
+     find_cast_members
+   end
 
     #  p "FINISH - HERE IS THE FINAL ARRAY"
     #  p films_in
@@ -69,8 +69,8 @@ class XxxController < ApplicationController
 
     #  film_appearances
 
-    p "<>"*44
-    p actor_name
+    # p "<>"*44
+    # p actor_name
     # p actor_name = @myvar.split.each{ | word | word.capitalize! }.join(' ')
     # #
     # movies_user_has_seen = Movie.all
@@ -80,9 +80,9 @@ class XxxController < ApplicationController
     # Movie.find(2).actors.split(', ').include?(actor)
 
 
-    films_in.uniq
 
-  end
+
+  # end
 
 
 #   pop array off the array

@@ -1,6 +1,6 @@
 <div id='user-show'>
 <section class="page-container">
-  <%= image_tag('background-main.jpeg', alt: "User Background", class: "ubi") %>
+  <%#= image_tag('background-main.jpeg', alt: "User Background", class: "ubi") %>
 <p id="notice"><%= notice %></p>
 
 <h2 class="welcome">Welcome <%= @user.first_name %>!</h2>
@@ -13,7 +13,7 @@
   </ul>
 </section>
 
-<%= link_to 'Update Profile', edit_user_path(@user) %>
+<%= link_to 'Update Profile', edit_user_path(@user), class: 'btn btn-default btn-xs' %>
 <%#= link_to 'Back', users_path %>
 </section>
 </div>

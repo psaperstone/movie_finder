@@ -2,15 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-* {
-  border-color: red;
+
+
+
+
+
+
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), image-url('background-main.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h2.xxx {
+  color: white;
+}
+
+table.xxx {
+  color: white;
   border-style: solid;
-  border-width: medium;
+  border-width: thin;
 }
 
 h1.xxx {
-  color: red;
-}
-.rating {
-  text-align: center;
+  color: white;
 }
