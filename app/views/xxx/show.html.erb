@@ -12,14 +12,11 @@
     <% @search_result.each do |x|%>
     <tr>
       <td><%= x[0] %></td>
-      <td><%= x[1] %></td>
+      <td ="rating"><%= x[1].round(1) %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
-
-
-
-<p>The Actor variable =  <%= @myvar %></p>
+<br><br>
 
 <%= link_to 'Home', current_user %>
