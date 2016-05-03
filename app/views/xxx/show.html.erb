@@ -1,5 +1,18 @@
-<h1>The actor appeared in these films you have not seen:</h1>
+<h1>All films in which <%= @myvar.split.each{ | word | word.capitalize! }.join(' ') %> has appeared in:</h1>
 
-
-
-<p>List:  <%= @search_result %></p>
+<table>
+  <th>
+    <tr>
+      <td><h2>Movie Title</h2></td>
+      <td><h2>Rating</h2></td>
+    </tr>
+  </th>
+  <tbody>
+    <% @search_result.each do |x|%>
+    <tr>
+      <td><%= x[0] %></td>
+      <td><%= x[1] %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

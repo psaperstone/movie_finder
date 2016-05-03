@@ -27,6 +27,7 @@ class XxxController < ApplicationController
      all_credits = Tmdb::Person.credits(actor)['cast']  # returns all credits info
 
      films_in = []
+     actor_name = @myvar.split.each{ | word | word.capitalize! }.join(' ')
 
      all_credits.each do |film|
        @search = Tmdb::Search.new
@@ -40,15 +41,49 @@ class XxxController < ApplicationController
        if film['title'].nil?
          next
        else
-         films_in << [film['title'],rating]     # insert each of the actors films & rating into the array
-         p "THE MULTI-DIMEMSIONAL ARRAY IS BUILDING............."
-         p films_in
+          films_in << [film['title'],rating] # insert each of the actors films & rating into the array
+        #  p "THE MULTI-DIMEMSIONAL ARRAY IS BUILDING............."
+        #  p films_in
        end
      end
-     p "FINISH - HERE IS THE FINAL ARRAY"
-     p films_in
+
+    #  p "FINISH - HERE IS THE FINAL ARRAY"
     #  film_appearances
+
+    p "<>"*44
+    p actor_name
+    # p actor_name = @myvar.split.each{ | word | word.capitalize! }.join(' ')
+    # #
+    # movies_user_has_seen = Movie.all
+    # movies_user_has_seen.each do |contains|
+    # end
+    #
+    # Movie.find(2).actors.split(', ').include?(actor)
+
+
+    films_in.uniq
+
   end
+
+
+#   pop array off the array
+# end
+# does Movie.each.cast .include? actor
+# if .include? then push film and rating into the display array
+
+
+
+# array.delete_if do |v|
+#     if v.should_be_deleted?
+#         true
+#     else
+#         v.update
+#         false
+#     end
+# end
+
+
+
 
   def create
     # @myvar = 'will ferrell'       #####  MANUAL INPUT - temporary work around !!!!
@@ -56,6 +91,8 @@ class XxxController < ApplicationController
     @search_result = find_cast_members
     render 'xxx/show'
   end
+end
+
 
 # films_in[0][0]
 # Movie.where(actors: 'will ferrell')
@@ -97,4 +134,3 @@ class XxxController < ApplicationController
   #   p @film_appearances.compact
   #   # @film_appearances = @film_appearances#.compact.join(', ')
   # end
-end
