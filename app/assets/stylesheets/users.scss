@@ -3,10 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-body {
-  height: 500px;
-  color: white;
-  color: #333;
+div.row {
+  // display: block;
+  height: 100%;
+  width: 100%;
+  // color: white;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -14,21 +15,48 @@ body {
   image-url('background-main.jpeg');
   background-repeat: no-repeat;
   background-size: 100%;
-  position: relative;
+  position: fixed;
 }
 
 section.user_movies li {
   color: white;
+  // margin-top: 5px;
 }
 
 section.page-container h2 {
-  color: white;
+  // color: white;
 }
 
-section.page-container {
-  color: white;
-}
-
-// div.login {
-//   position:absolute;
+// section.page-container {
+//   // align-self: center;
+//   color: white;
 // }
+
+#login-bkg {
+  margin-top: 0px;
+  margin-left: 0px;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-image: image-url('homepage-main.jpeg');
+  background-size: cover;
+}
+
+div.col-xs-9 {
+  // margin-left: 0px;
+  // margin-top: 75px;
+  // align-self: center;
+  color: white;
+}
+
+div.status {
+  color: white;
+}
+
+div.navpull-right ul li {
+  color: white;
+}
+
+section.user_movies a {
+  color: white;
+}

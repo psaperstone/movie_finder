@@ -4,7 +4,7 @@
 
 <%= link_to 'Back', users_path %> -->
 
-<div class="login">
+<div class="login" id='login-bkg'>
   <div class="container">
     <div class="horizontal-form">
 
@@ -18,7 +18,10 @@
       <%= f.submit "Create an account", class: "btn-submit" %>
     <% end %>
 
-
     </div>
   </div>
+  <div>
+    <ul>
+      <li><%= link_to "Login", 'login' %></a></li>
+    </ul>
 </div>

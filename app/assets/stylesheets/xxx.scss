@@ -2,13 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// body {
-//   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-//   image-url('bw-reel.jpeg');
-//   background-repeat: no-repeat;
-//   position: absolute;
-// }
+* {
+  border-color: red;
+  border-style: solid;
+  border-width: medium;
+}
 
-body {
-  display: flex;
+body.xxx {
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  background-image: url('bw-reel.jpeg');
+  background-repeat: no-repeat;
+  position: fixed;
+}
+h1.xxx {
+  color: red;
 }
